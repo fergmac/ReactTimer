@@ -1,7 +1,7 @@
 var React = require('react');
 
 var CountdownForm = React.createClass({
-    onSubmit: function (e) {
+    onSubmit(e) {
         e.preventDefault();
 
         var strSeconds = this.refs.seconds.value;
@@ -11,7 +11,7 @@ var CountdownForm = React.createClass({
             this.props.onSetCountdown(parseInt(strSeconds, 10));
         }
     },
-    render: function () {
+    render() {
         return (
            <div>
                 <form ref="form" onSubmit={this.onSubmit} className="countdown-form">
