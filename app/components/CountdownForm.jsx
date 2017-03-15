@@ -1,6 +1,10 @@
 var React = require('react');
 
-var CountdownForm = React.createClass({
+class CountdownForm extends React.Component{
+    constructor(props) {
+        super(props);
+        this.onSubmit = this.onSubmit.bind(this);
+    }
     onSubmit(e) {
         e.preventDefault();
 
@@ -10,7 +14,7 @@ var CountdownForm = React.createClass({
             this.refs.seconds.value = '';
             this.props.onSetCountdown(parseInt(strSeconds, 10));
         }
-    },
+    }
     render() {
         return (
            <div>
@@ -21,6 +25,6 @@ var CountdownForm = React.createClass({
            </div>
         );
     }
-});
+};
 
 module.exports = CountdownForm;
