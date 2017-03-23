@@ -1,4 +1,4 @@
-![Alt text](./screenshots/ReactWeather.png)
+![Alt text](./screenshots/ReactTimer.png)
 
 # React Timer App
 
